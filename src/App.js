@@ -19,13 +19,13 @@ function App() {
   useEffect(() => {
     console.log("carregou");
     fetchPokemons();
-  });
+  }, []);
 
   return (
     <div>
       <Navbar />
       <Searchbar />
-      <Pokedex />
+      <Pokedex pokemons={pokemons} loading={loading} />
     </div>
   );
 }
