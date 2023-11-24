@@ -1,15 +1,17 @@
 import React from "react";
 import { useState } from "react";
 
-const Searchbar = () => {
+const Searchbar = (props) => {
+  const { onSearch } = props;
   const [search, setSearch] = useState("dito");
+
   const onChangeHandler = (e) => {
     console.log("pokemon: ", e.target.value);
     setSearch(e.target.value);
   };
 
   const onButtonClickHandler = () => {
-    console.log("pokemon: ", search);
+    onSearch(search);
   };
   return (
     <div className="searchbar-container">
