@@ -10,8 +10,10 @@ nav {
   align-items: center;
 }
 
-.navbar-img {
-  width: 160px;
+.pokedex-header {
+  background-color: rgb(120, 158, 238);
+  padding: 10px;
+  color: white;
 }
 
 .searchbar-container {
