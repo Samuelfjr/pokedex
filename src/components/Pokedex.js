@@ -5,9 +5,7 @@ const Pokedex = (props) => {
   const { pokemons, loading } = props;
   return (
     <div>
-      <div>
-        <h1>Pokedex</h1>
-      </div>
+      <div></div>
       {loading ? (
         <div>Carregando...</div>
       ) : (

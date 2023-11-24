@@ -22,11 +22,13 @@ const Searchbar = () => {
 
   return (
     <div className="searchbar-container">
-      <div className="searchbar">
-        <input placeholder="Buscar pokemon" onChange={onChangeHandler} />
-      </div>
-      <div className="searchbar-btn">
-        <button onClick={onButtonClickHandler}>Buscar</button>
+      <div className="input-group">
+        <div className="searchbar">
+          <input placeholder="Pesquisar" onChange={onChangeHandler} />
+        </div>
+        <div className="searchbar-btn">
+          <button onClick={onButtonClickHandler}>Enviar</button>
+        </div>
       </div>
       {pokemon ? (
         <div>
