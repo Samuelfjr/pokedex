@@ -16,3 +16,4 @@ export const getPokemons = async (limit = 50, offset = 0) => {
     console.log("error: ", error);
   }
 };
+

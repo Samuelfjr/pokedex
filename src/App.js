@@ -11,7 +11,10 @@ function App() {
 
   const fetchPokemons = async () => {
     setLoading(true);
-    const result = await getPokemons();
+    const data = await getPokemons();
+    const promises = data.results.map(async (pokemon) => {
+      return await getPokemon()
+    })
     setPokemons(result);
     setLoading(false);
   };
@@ -25,7 +28,7 @@ function App() {
     <div>
       <Navbar />
       <Searchbar />
-      <Pokedex pokemons={pokemons} loading={loading} />
+      <Pokedex pokemons={pokemons.results} loading={loading} />
     </div>
   );
 }
