@@ -31,11 +31,12 @@ const Searchbar = () => {
         </div>
       </div>
       {pokemon ? (
-        <div>
-          <div>Nome: {pokemon.name}</div>
-          <div>Peso: {pokemon.weight}</div>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} />
-        </div>
+        <>
+          <h3>N° {pokemon.id}</h3>
+          <h3>Espécie: {pokemon.species.name}</h3>
+          <h3>Nome: {pokemon.name}</h3>
+          <h3>Egg Group: {pokemon.name}</h3>
+        </>
       ) : null}
     </div>
   );
